@@ -1,0 +1,13 @@
+﻿<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">Loading Panel</div>
+        <div class="panel-body">
+            <p>Loading Panel Component (The Loading Message could be transcluded)</p>
+            <LoadingMessageComponent v-bind:IsWorking="IsBusy">
+                Working...
+            </LoadingMessageComponent>
+
+            <button class="btn btn-primary" @click="changeBusyState()">{{buttonLabel}}</button>
+            </div>
+     </div>
+</div>

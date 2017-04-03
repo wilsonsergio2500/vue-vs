@@ -1,0 +1,21 @@
+﻿<div class="col-md-12">
+
+    <div :class="containerClasses" v-if="!IsBusy">
+        <h4>{{stock.e}}:{{stock.t}}- {{stock.lt}}</h4>
+
+
+        <span>{{stock.l_cur}} USD </span>
+        <span class="small"></span>
+        <i :class="iconClasses"></i>
+        <span :class="statusClass">
+            <strong>{{stock.c_fix}}({{stock.cp}}%)</strong>
+        </span>
+    </div>
+
+    <div class="col-md-12">
+        <LoadingMessageComponent v-bind:IsWorking="IsBusy">
+            Fetching <b>{{ticket}}</b>.. Loading..
+        </LoadingMessageComponent>
+    </div>
+
+</div>
